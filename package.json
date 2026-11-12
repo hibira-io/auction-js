@@ -1,0 +1,76 @@
+{
+  "name": "@hibira-io/auction",
+  "version": "0.1.0",
+  "description": "Realtime auction house for games on pusher-js and Laravel Echo: live listings, bids, anti-snipe timers, buyout and settlement, with your server as the authority",
+  "keywords": [
+    "auction",
+    "auction-house",
+    "marketplace",
+    "trading-post",
+    "game-economy",
+    "bidding",
+    "pusher",
+    "pusher-js",
+    "laravel-echo",
+    "multiplayer",
+    "websocket",
+    "realtime",
+    "hibira"
+  ],
+  "homepage": "https://hibira.io",
+  "bugs": {
+    "url": "https://github.com/hibira-io/auction-js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hibira-io/auction-js.git"
+  },
+  "license": "MIT",
+  "author": "Hibira (https://hibira.io)",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./server": {
+      "types": "./server.d.ts",
+      "default": "./server.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "server.js",
+    "server.d.ts",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "test:e2e": "node --test test/e2e/*.e2e.mjs"
+  },
+  "peerDependencies": {
+    "pusher-js": ">=7"
+  },
+  "peerDependenciesMeta": {
+    "pusher-js": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "pusher": "^5.3.4",
+    "pusher-js": "^8.6.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}
